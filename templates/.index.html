@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Stock Predictions</h1>
+    <div class="outer-div">
+        <div class="inner-div">
+            <form action="/predict" method="post">
+                <label for="ticker">Ticker:</label>
+                <input type="text" id="ticker" name="ticker" required>
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+        <div class="inner-div">
+            <h1>Standard Deviations</h1>
+            {# Toggle #}
+            <!-- p>O - C</p>
+            <p>O - H</p>
+            <p>O - L</p>
+            <p>H - L</p>
+            <p>L - H</p>
+            <p>C - O</p-->
+        </div>
+        <div class="inner-div">
+            <h1>Regression</h1>
+            <!--p>Open</p-->
+        </div>
+        <div class="inner-div">
+            <h1>OHLC Chart, Stop Loss, & Take Profit</h1>
+        </div>
+        <div class="inner-div">
+            <h1>Sine Wave</h1>
+        </div>
+        <div class="inner-div">
+            <h1>Eigen Spaces</h1>
+        </div>
+        <div class="inner-div">
+            <h1>Impulse</h1>
+    </div>
+    {# for value in data #}
+        <p>{# value #}</p>
+    {# endfor #}
+    {{ plot|safe }}
+{% endblock %}

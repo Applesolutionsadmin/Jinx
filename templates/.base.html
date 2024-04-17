@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Predictions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <style>
+        .outer-div {
+            background-color: gray;
+            width: 400px;
+            height: 1000px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .inner-div {
+            width: 100%;  /* make each box take the full width of the outer box */
+            height: calc((100% - 100px) / 7);  /* calculate the height of each box */
+            margin: 10px 0;  /* apply margin only to the top and bottom */
+            padding: 20px;  /* add padding inside the box */
+            box-sizing: border-box;
+            background-color: white;
+            transition: background-color 0.3s;  /* add transition effect */
+        }
+        .inner-div:hover {
+            background-color: lightgray;  /* change background color on hover */
+        }
+    </style>
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>

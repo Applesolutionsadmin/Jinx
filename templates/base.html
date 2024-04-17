@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Application</title>
+    <!-- Add your CSS files here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Add your header here -->
+    </header>
+
+    <nav>
+        <!-- Incude nav.html -->
+        {% include 'nav.html' %}
+    </nav>
+
+    <main>
+        {% block content %}
+        <!-- Content will be inserted here -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Add your footer here -->
+    </footer>
+
+    <!-- Add your JavaScript files here -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
